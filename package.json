@@ -1,0 +1,14 @@
+{
+  "name": "js-snippets",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "url": "https://TylerGarlick@github.com/helio-training/js-snippets",
+    "type": "git"
+  },
+  "author": "Tyler Garlick <tjgarlick@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^3.9.1"
+  }
+}
