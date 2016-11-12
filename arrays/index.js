@@ -223,18 +223,87 @@ const models = [
     "model_make_id": "ford"
   }, { "model_name": "Zodiac", "model_make_id": "ford" }];
 
-const keys = Object.keys(person);
-
-console.log(keys);
 
 // explain and use for, for...in, and for...of statements to interate over an array or object
 
-for(let i = 0; i < models.length; i++) {
+for (let i = 0; i < models.length; i++) {
   const model = models[i];
-  console.log(model.model_name);
+  // console.log(model.model_name);
 }
+
+const keys = Object.keys(person);
+
+for (let key in person) {
+  // console.log(key);
+}
+
+for (let model of models) {
+  // console.log(model.model_name);
+}
+
+// models.forEach(model => console.log(model.model_name));
+
+
+const combine = (newThing) => [newThing, ...models];
 
 
 // use the while and do... while statements while a condition is true
+let index = 0;
+while (index < models.length) {
+  const model = models[index];
+  // console.log(model.model_name);
+  index++;
+}
+
+
+// do {
+//
+// } while(true);
+
+
 // explain the labeled, break, and continue statements
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/label
+
+// let foundColor = '';
+// switch (color) {
+//   case 'green':
+//     return 'green';
+//   case 'red':
+//     foundColor = 'red';
+//     break;
+//   default:
+//     foundColor = 'unknown';
+//     break;
+// }
+
+// Do something with foundColor
+
+
 // nest loops to traverse a multi-dimensional array
+
+const unJaggedArray = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 'other type']
+];
+
+unJaggedArray.forEach(row => {
+  row.forEach(column => {
+    // console.log(column);
+  });
+});
+
+
+
+const jaggedArray = [
+  [1, 2, 3], // row 1
+  [4, 5, 6, -1], // row 2
+  [7, 8, 9, 10, 11, 12] // row 3
+];
+
+jaggedArray.forEach(row => {
+  console.log(row);
+  row.forEach(column => {
+    console.log(column);
+  });
+});
