@@ -6,8 +6,7 @@ function hello() {
 const hello2 = function () {
 };
 
-// Tyler's preferred syntax... booyah.
-
+// Tyler's preferred "arrow function" syntax... booyah.
 const hello2 = () => {
 };
 
@@ -15,7 +14,8 @@ const hello3 = function (callback) {
   return callback();
 };
 
-// The callback is a use of an anonymous function
+// The callback function - also called a "higher-order" function - is a function passed to another function as the parameter.  Therefore, the embedded function is called inside the higher-order function.  This callback uses an anonymous function.
+
 hello3(function () {
   return 'Hello';
 });
@@ -24,7 +24,7 @@ hello3(() => {
   
 });
 
-// properly call functions
+// properly called functions
 hello();
 hello2();
 
@@ -38,6 +38,7 @@ function Person() {
   // this.age = 32;
 }
 
+//instantiating a class (Person)
 const person = new Person();
 
 
